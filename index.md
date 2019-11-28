@@ -11,9 +11,9 @@
     <body>
 
     <!-- annoying happy music -->
-    <iframe src="sounds/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
     <audio id="annoying-music" autoplay loop>
-    <source src="sounds/bensound-ukulele.mp3" type="audio/mpeg">
+    <source src="bensound-ukulele.mp3" type="audio/mpeg">
     </audio>
 
 
