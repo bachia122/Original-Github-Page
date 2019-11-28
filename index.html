@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>A Waste of Space</title>
+        <!-- responsive web design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+
+    <!-- annoying happy music -->
+    <iframe src="sounds/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio id="annoying-music" autoplay loop>
+    <source src="sounds/bensound-ukulele.mp3" type="audio/mpeg">
+    </audio>
+
+
+        <h1>well hello there</h1>
+        <h2>How're you feeling?</h2>
+        <br>
+
+        <a href = "notworthit.html">
+            <span style='font-size:100px;'>&#128553;</span>
+            i'm so bored of being bored
+        </a>
+        <br>
+        <a href = "happy-prep.html">
+            <span style='font-size:100px;'>&#128522;</span>
+            i'm so done with life
+        </a>
+
+        <!-- Optional JavaScript for Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <footer>
+        <i>Royalty Free Music from Bensound </i>
+        <button onclick="enableMute()" type="button"> but silence is the best music </button>
+        <script>
+            var vid = document.getElementById("annoying-music");
+            function enableMute() {
+              vid.muted = true;
+            }
+        </script>
+    </footer>
+
+    </body>
+
+</html>
+

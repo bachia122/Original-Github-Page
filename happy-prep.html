@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Prep Yourself</title>
+
+        <!-- responsive web design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+
+        <!-- annoying happy music -->
+        <iframe src="sounds/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+        <audio id="annoying-music" autoplay loop>
+        <source src="sounds/bensound-ukulele.mp3" type="audio/mpeg">
+        </audio>
+
+        <h1>allrighty then,<br> put on your headphones <br><small class="text-muted">or find a quiet space</small></h1><br><br>
+
+        <a href = "index.html">
+            &lt;&lt; no you can't make me
+        </a>
+        <br><br>
+        <a href = "happy-final.html">
+            i swear, if this is a jump scare.. >
+        </a>
+
+        <footer>
+            <i>Royalty Free Music from Bensound </i>
+            <button onclick="enableMute()" type="button">but make it shut up tho</button>
+            <script>
+                var vid = document.getElementById("annoying-music");
+                function enableMute() {
+                  vid.muted = true;
+                }
+            </script>
+        </footer>
+
+    </body>
+
+
+</html>
+

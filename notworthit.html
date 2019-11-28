@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>This Wasn't Worth It</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mootools/1.4.5/mootools-core-full-nocompat.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+
+    <script>//<![CDATA[
+      window.addEvent('domready', function() {
+      window.onload = function () {
+          var ImageMap = function (map, img) {
+                  var n,
+                      areas = map.getElementsByTagName('area'),
+                      len = areas.length,
+                      coords = [],
+                      previousWidth = 1200;
+                  for (n = 0; n < len; n++) {
+                      coords[n] = areas[n].coords.split(',');
+                  }
+                  this.resize = function () {
+                      var n, m, clen,
+                          x = img.offsetWidth / previousWidth;
+                      for (n = 0; n < len; n++) {
+                          clen = coords[n].length;
+                          for (m = 0; m < clen; m++) {
+                              coords[n][m] *= x;
+                          }
+                          areas[n].coords = coords[n].join(',');
+                      }
+                      previousWidth = document.body.clientWidth;
+                      return true;
+                  };
+                  window.onresize = this.resize;
+              },
+              imageMap = new ImageMap(document.getElementById('map'), document.getElementById('img_ID'));
+          imageMap.resize();
+          return;
+      }
+      });
+
+        //]]>
+
+      <!-- onclick alerts -->
+        function alertHector() {
+        alert("I am Hector.\n You found me!");
+      }
+          function alertHernando() {
+        alert("I am Hernando the Hispanic Housefly.\n ¡Déjame!");
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1>I spy with my little eye</h1>
+    <h2>Hector the Homeless Housefly</h2>
+
+    <div style="width:100%;">
+    <img id="img_ID" src="images/artwork.jpg" usemap="#map" alt="" style="width:100%;"  />
+    </div>
+
+    <map id="map" name="map">
+    <area shape="circle" coords="248,158,35" href="javascript:;" alt="Hernando" onclick="alertHernando()" title="Hernando"/>
+    <area shape="circle" coords="722,430,22" href="javascript:;" alt="Hector" onclick="alertHector()" title="Hector" />
+    </map>
+
+    <script>
+      if (window.parent && window.parent.parent){
+        window.parent.parent.postMessage(["resultsFrame", {
+          height: document.body.getBoundingClientRect().height,
+          slug: "p7EyT"
+        }], "*")
+      }
+      window.name = "result"
+    </script>
+
+    <br><a href = "index.html">&lt;&lt; oh man what a ripoff</a>
+    <h6><br>Original artwork was edited and taken from public domain.
+    <br><a href = "https://stackoverflow.com/a/13322059"> Source for Dynamic Image Mapper script.</a></h6>
+
+  </body>
+</html>
