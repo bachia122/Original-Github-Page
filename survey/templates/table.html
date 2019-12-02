@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h1>Registered Millenials</h1>
+    <ul>
+        {% for millenial in millenials %}
+            <li>{{ millenial[0] }}, born {{ millenial[1] }}, is {{ millenial[2] }}/5 times a millenial. </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
